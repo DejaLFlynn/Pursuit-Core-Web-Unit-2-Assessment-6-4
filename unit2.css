@@ -10,15 +10,25 @@ h1{
     align-items: center;
     display:flex;
     justify-content: space-around;
-    
-}
-#h1Text{
-    float: right;
-    font-weight: bold;
-    display: grid;
-    grid-auto-flow: column;
-    margin-bottom: 30px;
    
+
+}
+header{
+    background-color: skyblue;
+      display:flex;
+      flex-direction: row-reverse;
+      width:70%;
+      /* margin:auto; */
+      /* justify-content: space-between; */
+      align-items: center;
+
+}
+
+select{
+    position: relative;
+    display:inline-block;
+    align-content: flex-start;
+    
 }
 img{
     background: lightskyblue ;
@@ -43,9 +53,16 @@ img{
     margin-left: 31%;
     margin-right:25%;
     width: 50%;
+    position: relative;
+    display:inline-block;
+    align-content: flex-start;
 }
 input{
     width:400px;
+}
+ul{
+    text-align: center;
+   
 }
 @media only screen and (max-width:900px){
     body{
