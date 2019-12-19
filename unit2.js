@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     let select = document.querySelector("select")
     let form = document.querySelector("form")
     let ul = document.querySelector("ul")
+
     const getMovies =async()=>{
         try{
             let res = await axios.get("https://ghibliapi.herokuapp.com/films")
@@ -48,9 +49,12 @@ document.addEventListener("DOMContentLoaded",()=>{
     const getDescription = async(url)=>{
         console.log(url)
         let section = document.querySelector("select")
+        
         if(section){
             section.parentNode.removeChild(section)
         }
+        // let title = document.createElement("h3")
+        // title.innerText = url.title
         let p = document.createElement("p")
         p.innerText = url
         document.body.appendChild(p)

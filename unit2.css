@@ -15,7 +15,8 @@ h1{
 #h1Text{
     float: right;
     font-weight: bold;
-    
+    display: grid;
+    grid-auto-flow: column;
     margin-bottom: 30px;
    
 }
@@ -30,10 +31,21 @@ img{
     align-items: center;
     margin-bottom: 20px;
 }
-form{
-    align-items: center;
-  
+
+#submitReview{
+    align-content: center;
+    position: relative;
+    display: block;
+    margin: 0 auto;
    
+}
+#form{
+    margin-left: 31%;
+    margin-right:25%;
+    width: 50%;
+}
+input{
+    width:400px;
 }
 @media only screen and (max-width:900px){
     body{
