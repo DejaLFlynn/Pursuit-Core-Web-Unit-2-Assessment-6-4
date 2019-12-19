@@ -9,10 +9,13 @@ document.addEventListener("DOMContentLoaded",()=>{
             // debugger
             films.forEach(film=>{
                 let option = document.createElement("option")
+                let selected = document.querySelector("select")
                 option.innerText = film.title;
                 option.value = film.title
                 option.value = film.description;
                 select.appendChild(option)
+                selected.appendChild(option)
+                
             })
 
         }catch(err){

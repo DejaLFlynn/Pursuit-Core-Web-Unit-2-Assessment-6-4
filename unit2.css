@@ -1,10 +1,55 @@
 body{
     background: lavender;
     font-family: 'Courier New', Courier, monospace;
-    align-items: center;
-    margin:auto;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
 }
-
+h1{
+    align-items: center;
+    display:flex;
+    justify-content: space-around;
+    
+}
+#h1Text{
+    float: right;
+    font-weight: bold;
+    
+    margin-bottom: 30px;
+   
+}
 img{
+    background: lightskyblue ;
     height: 150px;
+    align-items: center;
+    display:flex;
+    width:70%;
+    margin:auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+form{
+    align-items: center;
+  
+   
+}
+@media only screen and (max-width:900px){
+    body{
+        background: lightskyblue;
+    }
+    #submitReview{
+        margin: 2% 2.5%;
+        width: 45%
+    }
+}
+@media only screen and (max-width:500px){
+    body{
+        background: rgb(3, 53, 151);
+    }
+    #submitReview{
+        margin: 2% 2.5%;
+        width: 95%
+    }
 }
