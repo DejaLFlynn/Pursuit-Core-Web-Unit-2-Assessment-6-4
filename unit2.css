@@ -16,9 +16,13 @@ h1{
 header{
     background-color: skyblue;
       display:flex;
+      justify-content: center;
       flex-direction: row-reverse;
       width:70%;
-      /* margin:auto; */
+      margin-bottom: 30px;
+      margin-right: 10px;
+      margin-left:10px;
+     
       /* justify-content: space-between; */
       align-items: center;
 
