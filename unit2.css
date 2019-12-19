@@ -1,0 +1,10 @@
+body{
+    background: lavender;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    margin:auto;
+}
+
+img{
+    height: 150px;
+}
