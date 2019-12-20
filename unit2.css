@@ -21,9 +21,7 @@ header{
       width:70%;
       margin-bottom: 30px;
       margin-right: 10px;
-      margin-left:10px;
-     
-      /* justify-content: space-between; */
+      margin-left:15%;
       align-items: center;
 
 }
@@ -63,6 +61,11 @@ img{
 }
 input{
     width:400px;
+    margin: 2% 2.5%;
+    width: 45%;
+    margin-left: 31%;
+    
+
 }
 ul{
     text-align: center;

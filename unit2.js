@@ -24,31 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     }
-    // const getTitle = async (url) => {
-    //     try {
-    //         let res = await axios.get(url)
-    //         let titles = res.data;
-    //         titles.forEach(title => {
-    //             let section = document.querySelector("section")
-    //             if (section) {
-    //                 section.parentNode.removeChild(section)
-    //             }
-    //             section = document.createElement("section")
-    //             let h1 = document.createElement("h1")
-    //             h1.innerText = title.film
-    //             let p = document.createElement("p")
-    //             p.innerText = url
-    //             document.body.appendChild(section)
-    //             section.appendChild(h1)
-    //             section.appendChild(p)
 
-    //         })
-
-
-    //     } catch (err) {
-    //         console.log("err")
-    //     }
-    // }
     const getDescription = async(url)=>{
         console.log(url)
 
@@ -57,8 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(section){
             section.parentNode.removeChild(section)
         }
-        // let title = document.createElement("h3")
-        // title.innerText = url.title
+     
         let p = document.createElement("p")
         p.innerText = url
         document.body.appendChild(p)
@@ -69,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     select.addEventListener("change", (event) => {
         getDescription(event.target.value)
-        getTitle(event.target.value)
+      
     })
     getMovies()
     form.addEventListener("submit", (event) => {
@@ -78,9 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let input = document.querySelector("input")
         li.innerText = `User Review: ${input.value}`
         ul.appendChild(li)
-        input.value = ""
-        button.addEventListener("click", () => {
-            ul.removeChild(li)
-        })
+        event.input.value = ""
+
     })
 })
