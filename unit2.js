@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 let option = document.createElement("option")
                 let selected = document.querySelector("select")
                 option.innerText = film.title;
-                option.value = film.title
-                option.value = film.description;
+                option.value = film.url
+                // option.value = film.description;
                 select.appendChild(option)
                 selected.appendChild(option)
-
+                // debugger
             })
 
         } catch (err) {
@@ -26,21 +26,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const getDescription = async(url)=>{
-        console.log(url)
+   try{
+       let response = await axios.get(url)
+       let title = response.data.title
+       let date = response.data.release_date
+       let description = response.data.description
+       let section = document.querySelector("#form")
+       let filmName = document.createElement('h3')
+       let p = document.createElement("p")
+       let year = document.createElement('h4')
+       section.innerHTML = ""
+       section.appendChild(filmName)
+       filmName.innerText = title
+       year.innerText = date
+       section.appendChild(year)
+       p.innerText = description
+       section.appendChild(p)
 
-        let section = document.querySelector("select")
+   }catch(err){
+       console.log("error")
+   }
 
-        if(section){
-            section.parentNode.removeChild(section)
-        }
-     
-        let p = document.createElement("p")
-        p.innerText = url
-        document.body.appendChild(p)
-        let title = document.createElement('h3')
-        title.innerText = url.title;
-        let year = document.createElement('p')
-        year.innerText = url.release_date
+      
+
+
     }
     select.addEventListener("change", (event) => {
         getDescription(event.target.value)
